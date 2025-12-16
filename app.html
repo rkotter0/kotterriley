@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Golf Guessing Game</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      padding-top: 56px;
+      background-color: #f7f9fa;
+      font-family: Arial, sans-serif;
+      color: #333;
+    }
+
+    .game-section {
+      background: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 40px;
+      max-width: 600px;
+      margin: 60px auto;
+      text-align: center;
+    }
+
+    .game-section h1 {
+      font-size: 2.2rem;
+      margin-bottom: 20px;
+    }
+
+    input[type="number"] {
+      width: 80%;
+      margin: 15px 0;
+    }
+
+    .navbar-dark .navbar-nav .nav-link {
+      color: white !important;
+    }
+
+    footer {
+      background-color: #2c2c2c;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">Riley Kotter</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
+        <li class="nav-item"><a class="nav-link" href="scratch.html">Scratch Page</a></li>
+        <li class="nav-item"><a class="nav-link active" href="app.html">Web Game</a></li>
+        <li class="nav-item"><a class="nav-link" href="golf_chart.html">Tableau Chart</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Main Game Content -->
+<div class="game-section">
+  <h1>Golf Guessing Game</h1>
+  <p>Guess a number between <strong>1 and 18</strong> — like choosing a hole on a golf course!</p>
+  <input type="number" id="guess" class="form-control mx-auto" min="1" max="18" placeholder="Enter your guess">
+  <button onclick="checkGuess()" class="btn btn-success mt-3">Submit</button>
+  <p id="result" class="mt-4 fw-semibold"></p>
+</div>
+
+<!-- Footer -->
+<footer class="text-light text-center py-3">
+  <small>&copy; <span id="year"></span> Riley Kotter</small>
+</footer>
+
+<!-- Scripts -->
+<script>
+  const answer = Math.floor(Math.random() * 18) + 1;
+
+  function checkGuess() {
+    const guess = parseInt(document.getElementById('guess').value);
+    const result = document.getElementById('result');
+
+    if (isNaN(guess) || guess < 1 || guess > 18) {
+      result.textContent = "⛳ Please enter a number between 1 and 18.";
+      return;
+    }
+
+    if (guess === answer) {
+      result.textContent = "🏌️‍♂️ Hole in one! You guessed correctly!";
+    } else if (guess < answer) {
+      result.textContent = "Too low. Try a higher hole.";
+    } else {
+      result.textContent = "Too high. Try a lower hole.";
+    }
+  }
+
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>

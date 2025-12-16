@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Resume | Riley Kotter</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      padding-top: 56px;
+      background-color: #f7f9fa;
+      font-family: Arial, sans-serif;
+    }
+    .section-title {
+      margin-top: 40px;
+      margin-bottom: 20px;
+      color: #2c3e50;
+    }
+    h1, h2, h3, h4 {
+      font-weight: 600;
+    }
+    p, li {
+      font-size: 1rem;
+      color: #333;
+    }
+    .navbar-dark .navbar-nav .nav-link {
+      color: white !important;
+    }
+    footer {
+      background-color: #2c2c2c;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">Riley Kotter</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="scratch.html">Scratch Page</a></li>
+        <li class="nav-item"><a class="nav-link" href="app.html">Web Game</a></li>
+        <li class="nav-item"><a class="nav-link" href="golf_chart.html">Tableau Chart</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Resume Section -->
+<section id="resume" class="container py-5">
+  <h2 class="section-title">Resume</h2>
+
+  <div class="row">
+    <!-- Resume Text Left -->
+    <div class="col-lg-7">
+      <h3>Education</h3>
+      <ul>
+        <li>
+          <strong>Brigham Young University</strong>, Provo UT  
+          <br>BS in Finance in progress, Expected graduation: 2028
+          <br>Relevant courses: IS 201, ACC 200, Stat 121, Family Finance, Econ 110
+        </li>
+      </ul>
+
+      <h3 class="mt-4">Experience</h3>
+      <ul>
+        <li><strong>America First Credit Union</strong> — Teller, Jan 2025 - Dec 2025  
+          <br>Processed over 20+ million in wires, deposits, and withdrawals.
+        </li>
+        <li><strong>Memorial Monuments</strong> — Headstone Production Technician, Feb 2020 - Sep 2021  
+          <br>Quality control on finished headstones and preparation for shipment.
+        </li>
+        <li><strong>JBL Fire Protection</strong> — Fire Sprinkler Technician, Jun 2022 - Aug 2022  
+          <br>Helped install and test fire sprinkler systems to meet safety codes.
+        </li>
+        <li><strong>Vietnam Service Mission</strong> — Volunteer, Jan 2023 - Dec 2024  
+          <br>Leadership, language skills, and English instruction.
+        </li>
+      </ul>
+
+      <h3 class="mt-4">Skills</h3>
+      <ul>
+        <li>Excel and data analysis</li>
+        <li>SQL and Tableau basics</li>
+        <li>Customer service</li>
+        <li>Leadership and teamwork</li>
+        <li>Vietnamese (conversational)</li>
+      </ul>
+
+      <h3 class="mt-4">Interests</h3>
+      <ul>
+        <li>Golf</li>
+        <li>Real estate</li>
+        <li>Investing</li>
+      </ul>
+    </div>
+
+    <!-- Chart on the Right -->
+    <div class="col-lg-5 mt-4 mt-lg-0">
+      <h4 class="mb-3">Time Spent in Each Role</h4>
+      <div style="font-family: monospace; line-height: 2.2; font-size: 1.1rem;">
+        <div><strong>Teller</strong> (12 mos)<br><span style="color:#0d6efd; font-size: 1.5rem;">████████████</span></div>
+        <div><strong>Monuments</strong> (8 mos)<br><span style="color:#0d6efd; font-size: 1.5rem;">████████</span></div>
+        <div><strong>Fire Tech</strong> (3 mos)<br><span style="color:#0d6efd; font-size: 1.5rem;">███</span></div>
+        <div><strong>Missionary</strong> (24 mos)<br><span style="color:#0d6efd; font-size: 1.5rem;">████████████████████</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="text-light text-center py-3">
+  <small>&copy; <span id="year"></span> Riley Kotter</small>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
+
